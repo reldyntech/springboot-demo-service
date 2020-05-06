@@ -16,7 +16,7 @@ public class DemoController {
      */
     @GetMapping("/welcome")
     public String welcome() {
-        return "Welcome to Alibaba Cloud Tech Meet 2020!";
+        return "Welcome to Alibaba Cloud TechMeet 2020!!";
     }
 
 
