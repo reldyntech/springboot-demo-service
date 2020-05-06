@@ -23,18 +23,18 @@ public class DemoController {
     /**
      * Get the host networking information
      */
-    // @GetMapping("/netinfo")
-    // public Map<String, String> netinfo() {
-    //     Map<String, String> map = new HashMap<>();
-    //     try {
-    //         InetAddress inetAddress = InetAddress.getLocalHost();
-    //         map.put("message", "Welcome to Alibaba TechMeet 2020");
-    //         map.put("hostname", inetAddress.getHostName());
-    //         map.put("ipAddress", inetAddress.getHostAddress());
-    //         return map;
-    //     } catch (UnknownHostException e) {
-    //         e.printStackTrace();
-    //         return map;
-    //     }
-    // }
+    @GetMapping("/netinfo")
+    public Map<String, String> netinfo() {
+        Map<String, String> map = new HashMap<>();
+        try {
+            InetAddress inetAddress = InetAddress.getLocalHost();
+            map.put("message", "Welcome to Alibaba TechMeet 2020!");
+            map.put("hostname", inetAddress.getHostName());
+            map.put("ipAddress", inetAddress.getHostAddress());
+            return map;
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+            return map;
+        }
+    }
 }
